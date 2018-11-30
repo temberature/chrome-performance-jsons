@@ -1,1 +1,3 @@
-console.log(performance.now());
+setTimeout(() => {
+    console.log(performance.now());
+}, 0)
