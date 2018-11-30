@@ -14,3 +14,6 @@ DOMContentLoaded 在Recalculate Style 之前
 
 换成css
 
+加入inline js
+
+Evaluate Script 在Parse Stylesheet 之后
