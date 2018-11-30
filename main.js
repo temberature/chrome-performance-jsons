@@ -1,3 +1,6 @@
-setTimeout(() => {
-    console.log(performance.now());
-}, 0)
+var app = new Vue({
+    el: '#app',
+    data: {
+        message: 'Hello Vue!'
+    }
+})

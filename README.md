@@ -22,3 +22,5 @@ Evaluate Script 在Parse Stylesheet 之后
 
 加了timeout 0
 确实在load 之后啊
+
+最简单的vue
