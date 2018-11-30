@@ -7,4 +7,10 @@ chrome 会产生<html><head></head><body></body></html>
 最简单的文件
 多了ResourceReceivedData
 
+加入style
 UpdateLayoutTree | Recalculate Style
+
+DOMContentLoaded 在Recalculate Style 之前
+
+换成css
+
