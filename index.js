@@ -2,9 +2,10 @@ const fs = require('fs-extra')
 const loadJsonFile = require('load-json-file')
 const writeJsonFile = require('write-json-file');
 
-const events = loadJsonFile.sync('./Profile-20181130T121959.json')
+const events = loadJsonFile.sync('./Profile-20181130T122751.json')
 
-const visibleEvents = events.filter(event => event.cat.startsWith('devtools.timeline')).sort((a, b) => a.ts - b.ts)
+const DefaultCategories = "-*,devtools.timeline,v8.execute,disabled-by-default-devtools.timeline,blink.console,blink.user_timing,disabled-by-default-devtools.timeline.stack".split(',')
+const visibleEvents = events.filter(event => !['GPUTask', 'LatencyInfo.Flow', 'RasterTask'].includes(event.name) && event.cat.split(',').filter(cat => DefaultCategories.includes(cat)).length > 0).sort((a, b) => a.ts - b.ts)
 
 let fileContent = '['
 
